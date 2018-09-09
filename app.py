@@ -1,6 +1,8 @@
 from bottle import route, run, error, template, redirect, abort, request, static_file
 from sys import argv
-
+import os
+from os import environ as env
+application = bottle.default_app()
 @route('/')
 def redir():
     redirect('/path?id=1')
