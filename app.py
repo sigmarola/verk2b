@@ -21,11 +21,6 @@ def index(name):
     elif name == 'contact':
         return '<h1>Contact</h1>' \
                '<a href="/home">Home</a><br><a href="/about">About</a><br><a href="/contact">Contact</a>'
-    else:
-        abort(404)
-@error(404)
-def error404(error):
-    return '<h1>villa</h1>'
 
 
 bottle.run(host='0.0.0.0', port=argv[1])
