@@ -22,4 +22,5 @@ def index(name):
         abort(404)
 @error(404)
 def error404(error):
+    return '<h1>villa</h1>'
 bottle.run(host='0.0.0.0', port=argv[1])
