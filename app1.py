@@ -22,3 +22,4 @@ def index(name):
         abort(404)
 @error(404)
 def error404(error):
+bottle.run(host='0.0.0.0', port=argv[1])
