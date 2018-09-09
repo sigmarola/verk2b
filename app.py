@@ -4,7 +4,7 @@ import os
 from os import environ as env
 import bottle
 application = bottle.default_app()
-from bottle import default_app, request, route, response, get, error, redirect
+from bottle import default_app, request, route, response, get, error, redirect, abort, static_file
 from sys import argv
 
 bottle.debug(True)
