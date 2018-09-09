@@ -4,11 +4,11 @@ import os
 from os import environ as env
 import bottle
 application = bottle.default_app()
-from bottle import default_app, request, route, response, get
+from bottle import default_app, request, route, response, get, error, redirect
 from sys import argv
 
 bottle.debug(True)
-main = Bottle()
+
 
 @route('/')
 def redir():
@@ -30,7 +30,7 @@ def index():
                '<a href="/path?id=1"><img src="static/img/shib3.jpg"></a><br><a href="/path?id=1"><img src="static/img/shib1.jpg"></a><br><a href="/path?id=3"><img src="static/img/shib2.jpg"></a>'
     else:
         abort(404)
-@Bottle.error(main, 404)
+@error(404)
 def error404(error):
     return '<h1>villa</h1>'
 @route('/static/<skra:path>')
