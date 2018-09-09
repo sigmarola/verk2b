@@ -29,6 +29,6 @@ def error404(error):
 @route('/static/<skra:path>')
 def static_skrar(skra):
     return static_file(skra, root='./public/')
-
+bottle.debug(True)
 #run(host='localhost', port=8000, debug=True)
 bottle.run(host='0.0.0.0', port=argv[1])
