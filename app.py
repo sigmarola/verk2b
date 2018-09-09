@@ -9,10 +9,10 @@ from sys import argv
 
 bottle.debug(True)
 
-@route('/')
+@get('/')
 def redir():
     redirect('/home')
-@route('/<name>')
+@get('/<name>')
 def index(name):
     if name == 'home':
         return '<h1>Home</h1>' \
